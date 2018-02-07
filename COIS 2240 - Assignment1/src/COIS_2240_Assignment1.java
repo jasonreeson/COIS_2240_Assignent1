@@ -1,5 +1,5 @@
 // Class: COIS 2240
-// Assignnet: #1
+// Assignment: #1
 // Developer: Jason Reeson
 // Start Date: Jan 28, 2017
 // End Date:
@@ -47,9 +47,19 @@ import java.util.Scanner;  // needed for Scanner
 	System.out.println("Iterative Method - Time Elapsed: " + (endTimeNanoLoop - startTimeNanoLoop)/1000000 + " milliseconds.\n");
 	System.out.println("Recursive Method - Time Elapsed: " + (endTimeNanoRec - startTimeNanoRec) + " nanoseconds.");
 	System.out.println("Recursive Method - Time Elapsed: " + (endTimeNanoRec - startTimeNanoRec)/1000000 + " milliseconds.");
-		
+	
+	//Close the scanner object - prevents potential memory issues
+	scanner.close();
+	
 	} 
 	
+	//Method: fiboSeriesRec
+	//Description: This method will generate a fibonacci (using recursion) sequence equal to the number provided
+	//Parameters:
+	// rNum1 - first number in the sequence
+	// rNum2 - second number in the sequence
+	// counter - number used to track when the process should end
+	// numbers - value provided by teh user; dictates the # of numbers in the sequence
 	public static void fiboSeriesRec(int rNum1, int rNum2, int counter, int numbers)
 	{
 		//Setup the termination clause
@@ -66,6 +76,13 @@ import java.util.Scanner;  // needed for Scanner
 		}
 	}
 	
+	//Method: fiboSeriesLoop
+	//Description: This method will generate a fibonacci (using a loop) sequence equal to the number provided
+	//Parameters:
+	// rNum1 - first number in the sequence
+	// rNum2 - second number in the sequence
+	// counter - number used to track when the process should end
+	// numbers - value provided by teh user; dictates the # of numbers in the sequence
 	public static void fiboSeriesLoop(int num1, int num2, int counter, int numbers)
      {
         //Print the first 2 numbers in the sequence
